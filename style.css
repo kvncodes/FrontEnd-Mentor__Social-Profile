@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+	--clr-primary-green-400: hsl(75, 94%, 57%);
+
+	--clr-neutral-100: hsl(0, 0%, 100%);
+	--clr-neutral-700: hsl(0, 0%, 20%);
+	--clr-neutral-800: hsl(0, 0%, 12%);
+	--clr-neutral-900: hsl(0, 0%, 8%);
+
+	--ff-base: "Inter", sans-serif;
+
+	--fs-base: 0.875rem;
+
+	--fw-base: 400;
+	--fw-strong: 600;
+	--fw-bold: 700;
+}
+
+@layer reset {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	/* 3. Enable keyword animations */
+	@media (prefers-reduced-motion: no-preference) {
+		html {
+			interpolate-size: allow-keywords;
+		}
+	}
+
+	body {
+		/* 4. Add accessible line-height */
+		line-height: 1.5;
+		/* 5. Improve text rendering */
+		-webkit-font-smoothing: antialiased;
+	}
+
+	img,
+	picture,
+	video,
+	canvas,
+	svg {
+		display: block;
+		max-width: 100%;
+	}
+
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+	}
+
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		overflow-wrap: break-word;
+	}
+
+	p {
+		text-wrap: pretty;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		text-wrap: balance;
+	}
+}
+
+body {
+	font-family: var(--ff-base);
+	font-size: var(--fs-base);
+	font-weight: var(--fw-base);
+	background-color: var(--clr-neutral-900);
+	color: var(--clr-neutral-100);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100svh;
+	padding-inline: 1.5rem;
+}
+
+.social-links-container {
+	background-color: var(--clr-neutral-800);
+	width: 100%;
+	padding: 2rem 1.5rem 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	margin-block-end: 2rem;
+	text-align: center;
+	border-radius: 12px;
+	max-width: 400px;
+}
+
+.social-links-container .profile-details {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.social-links-container .profile-details img {
+	border-radius: 50%;
+	width: 85px;
+	height: auto;
+}
+
+.profile-description {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+}
+
+.profile-description h1 {
+	font-weight: var(--fw-strong);
+}
+
+.profile-description p {
+	color: var(--clr-primary-green-400);
+	font-weight: var(--fw-strong);
+}
+
+.profile-details h2 {
+	font-size: var(--fs-base);
+	font-weight: 400;
+	color: rgb(216, 216, 216);
+}
+
+.links-group {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.links-group a {
+	background-color: var(--clr-neutral-700);
+	color: var(--clr-neutral-100);
+	font-weight: var(--fw-strong);
+	text-decoration: none;
+	padding-block: 0.8rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.links-group a:hover {
+	background-color: var(--clr-primary-green-400);
+	color: var(--clr-neutral-900);
+	font-weight: 700;
+}
